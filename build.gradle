@@ -1,0 +1,151 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version '1.16.0-alpha.16'
+	id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	// Add repositories to retrieve artifacts from in here.
+	// You should only use this when depending on other mods because
+	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
+	// for more information about repositories.
+}
+
+loom {
+	runs {
+		server {
+			programArgs '--port', '35565'
+		}
+	}
+}
+
+dependencies {
+	// To change the versions see the gradle.properties file
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	// Fabric API. This is technically optional, but you probably want it anyway.
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": inputs.properties.version
+	}
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(25)
+	}
+	withSourcesJar()
+}
+
+jar {
+	inputs.property "archivesName", project.base.archivesName
+
+	from("LICENSE") {
+		rename { "${it}_${inputs.properties.archivesName}"}
+	}
+}
+
+tasks.named('build') { finalizedBy('writeServerLaunchScripts') }
+
+def java25Launcher = javaToolchains.launcherFor {
+	languageVersion = JavaLanguageVersion.of(25)
+}
+
+tasks.register('writeServerLaunchScripts') {
+	group = 'fabric'
+	description = 'Writes server/run-with-gradle-jdk.sh and server/run-with-gradle-jdk.bat using JDK 25 from this project toolchain (avoids class file 69 vs 65 if java on PATH is 21).'
+	outputs.files(
+		layout.projectDirectory.file('server/run-with-gradle-jdk.sh'),
+		layout.projectDirectory.file('server/run-with-gradle-jdk.bat')
+	)
+	doLast {
+		def javaExeFile = java25Launcher.get().executablePath.asFile
+		def javaExe = javaExeFile.absolutePath
+		def javaShEsc = javaExe.replace("'", "'\\''")
+		def serverDir = layout.projectDirectory.dir('server').asFile
+		def sh = new File(serverDir, 'run-with-gradle-jdk.sh')
+		sh.text = """#!/usr/bin/env bash
+set -euo pipefail
+cd "\$(dirname "\$0")"
+JAVA_EXE='${javaShEsc}'
+JAR=""
+for j in fabric-server-launch.jar server.jar; do
+	[[ -f "\$j" ]] && JAR="\$j" && break
+done
+[[ -n "\$JAR" ]] || { echo "No fabric-server-launch.jar or server.jar in \$(pwd)" >&2; exit 1; }
+if [[ -z "\${JAVA_OPTS:-}" ]]; then
+	exec "\$JAVA_EXE" -Xmx2G -jar "\$JAR" nogui "\$@"
+else
+	exec "\$JAVA_EXE" \${JAVA_OPTS} -jar "\$JAR" nogui "\$@"
+fi
+"""
+		sh.setExecutable(true)
+		def javaBat = javaExe.replace('/', '\\')
+		def bat = new File(serverDir, 'run-with-gradle-jdk.bat')
+		bat.text = """@echo off
+setlocal
+cd /d "%~dp0"
+set "JAVA_EXE=${javaBat}"
+set JAR=
+if exist fabric-server-launch.jar set JAR=fabric-server-launch.jar
+if not defined JAR if exist server.jar set JAR=server.jar
+if not defined JAR (
+  echo No fabric-server-launch.jar or server.jar in this folder.
+  exit /b 1
+)
+if defined JAVA_OPTS (
+  "%JAVA_EXE%" %JAVA_OPTS% -jar "%JAR%" nogui %*
+) else (
+  "%JAVA_EXE%" -Xmx2G -jar "%JAR%" nogui %*
+)
+"""
+	}
+}
+
+tasks.register('remindFabricServerJava') {
+	group = 'fabric'
+	doLast {
+		println ''
+		println '=' * 72
+		println 'Minecraft 26.1.x server must run on Java 25 (class file 69).'
+		println 'If you see 69 vs 65 in UnsupportedClassVersionError, the server used Java 21.'
+		println 'After this build, start with: ./run-server.sh or ./server/run-with-gradle-jdk.sh (.bat on Windows).'
+		println 'See server/READ_ME_FIRST.txt'
+		println '=' * 72
+		println ''
+	}
+}
+
+tasks.named('writeServerLaunchScripts') { finalizedBy('remindFabricServerJava') }
+
+// configure the maven publication
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+			artifactId = project.archives_base_name
+			from components.java
+		}
+	}
+
+	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+	repositories {
+		// Add repositories to publish to here.
+		// Notice: This block does NOT have the same function as the block in the top level.
+		// The repositories here will be used for publishing your artifact, not for
+		// retrieving dependencies.
+	}
+}
