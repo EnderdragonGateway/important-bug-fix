@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:spider_eye",
+    "minecraft:brown_mushroom",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "components":{
+      "food":{
+        "can_always_eat":false,"nutrition":3,"saturation":4.8
+      },
+        "consumable":{
+          "on_consume_effects":[
+            {"type":"apply_effects","effects":[{"amplifier":0,"duration":80,"id":"minecraft:poison"}]},
+            {"type":"apply_effects","effects":[{"amplifier":0,"duration":40,"id":"minecraft:weakness"}]}
+          ]
+        }
+    },
+    "count": 1,
+    "id": "minecraft:fermented_spider_eye"
+  }
+}

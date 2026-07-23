@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:skeleton_skull",
+    "X": "minecraft:gold_ingot"
+  },
+  "pattern": [
+    "XXX",
+    "X#X",
+    "XXX" 
+  ],
+  "result": {
+    "components":{
+      "food":{
+        "can_always_eat":true,"nutrition":4,"saturation":9.6
+      },
+        "consumable":{
+          "consume_seconds":0.5,
+          "on_consume_effects":[
+            {"type":"apply_effects","effects":[{"amplifier":2,"duration":100,"id":"minecraft:regeneration"}]},
+            {"type":"apply_effects","effects":[{"amplifier":0,"duration":2400,"id":"minecraft:absorption"}]}
+          ]
+        },
+      "minecraft:custom_name":"金头",
+      "use_cooldown":{"seconds":10},
+      "rarity":"rare"
+    },
+    "count": 1,
+    "id": "minecraft:honey_bottle"
+  }
+}

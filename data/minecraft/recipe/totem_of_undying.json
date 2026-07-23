@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:totem_of_undying",
+    "minecraft:glistering_melon_slice"
+  ],
+  "result": {
+    "components":{
+        "minecraft:death_protection":{
+          "death_effects":[
+            {"type":"clear_all_effects"},
+            {"type":"apply_effects","effects":[{"amplifier":4,"duration":1,"id":"minecraft:resistance"}]},
+            {"type":"apply_effects","effects":[{"amplifier":2,"duration":200,"id":"minecraft:absorption"}]},
+            {"type":"apply_effects","effects":[{"amplifier":2,"duration":400,"id":"minecraft:regeneration"}]},
+            {"type":"apply_effects","effects":[{"amplifier":0,"duration":1200,"id":"minecraft:fire_resistance"}]}
+          ]
+        },
+      "minecraft:lore": [
+        "经过平衡调整的图腾",
+        "爆图腾时基本无敌,且刚好能防瞬间伤害2",
+        "添加了抗性提升5级1刻(0.05秒)",
+        "伤害吸收提升为3级10秒,吸收12点伤害",
+        "生命恢复提升为3级20秒,总共恢复33点",
+        "抗火时长40秒->1分钟"
+      ],
+      "minecraft:custom_name":"不死图腾",
+      "rarity":"rare"
+    },
+    "count": 1,
+    "id": "minecraft:totem_of_undying"
+  }
+}

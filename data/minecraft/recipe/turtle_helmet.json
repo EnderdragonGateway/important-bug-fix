@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": "minecraft:turtle_scute"
+  },
+  "pattern": [
+    "XXX",
+    "X X"
+  ],
+  "result": {
+    "components": {
+      "minecraft:attribute_modifiers": [
+        {"type":"armor", "id":"minecraft:ta4","slot":"head", "amount":3, "operation":"add_value"}
+      ],
+      "minecraft:lore": [
+        "调整的海龟壳",
+        "1]护甲2->3"
+      ],
+      "minecraft:max_damage": 275
+    },
+    "count": 1,
+    "id": "minecraft:turtle_helmet"
+  }
+}
+

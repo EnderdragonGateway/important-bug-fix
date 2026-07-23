@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "minecraft:diamond_boots",
+  "result": {
+    "components": {
+      "minecraft:attribute_modifiers": [
+        {"type":"armor", "id":"minecraft:nat4","slot":"feet", "amount":3, "operation":"add_value"},
+        {"type":"armor_toughness", "id":"minecraft:nat4","slot":"feet", "amount":4, "operation":"add_value"},
+        {"type":"knockback_resistance", "id":"minecraft:nkb4", "slot":"feet", "amount":0.1, "operation":"add_value"}
+      ],
+      "minecraft:lore": [
+        "下界合金强化靴子",
+        "1]韧性3->4",
+        "2]耐久度基数37->40"
+      ],
+      "minecraft:max_damage": 520
+    },
+    "count": 1,
+    "id": "minecraft:netherite_boots"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

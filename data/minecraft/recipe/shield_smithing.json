@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "minecraft:shield",
+  "result": {
+    "components": {
+      "minecraft:lore": [
+        "下界合金强化盾牌",
+        "1]格挡生效无延迟,范围110°",
+        "2]格挡>15的强力攻击也会受到击退",
+        "3]伤害减免到max(0,0.1x-1.5)",
+        "4]最大耐久提升,<2弱攻击不耗耐久"
+      ],
+      "minecraft:rarity": "rare",
+      "minecraft:enchantments": {
+        "minecraft:unbreaking": 4
+      },
+      "minecraft:max_damage": 770,
+      "minecraft:blocks_attacks":{
+        "block_delay_seconds": 0,
+        "bypassed_by":"#bypasses_shield",
+        "damage_reductions":[
+          {
+            "base": 1.5,
+            "factor": 0.9,
+            "horizontal_blocking_angle": 55
+          }
+        ],
+        "item_damage": {
+          "base": 0.0,
+          "factor": 1.0,
+          "threshold": 2.0
+        }
+      }
+    },
+    "count": 1,
+    "id": "minecraft:shield"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

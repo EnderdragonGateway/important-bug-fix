@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "minecraft:diamond_leggings",
+  "result": {
+    "components": {
+      "minecraft:attribute_modifiers": [
+        {"type":"armor", "id":"minecraft:na3","slot":"legs", "amount":6, "operation":"add_value"},
+        {"type":"armor_toughness", "id":"minecraft:nat3","slot":"legs", "amount":4, "operation":"add_value"},
+        {"type":"knockback_resistance", "id":"minecraft:nkb3", "slot":"legs", "amount":0.1, "operation":"add_value"}
+      ],
+      "minecraft:lore": [
+        "下界合金强化护腿",
+        "1]韧性3->4",
+        "2]耐久度基数37->40"
+      ],
+      "minecraft:max_damage": 600
+    },
+    "count": 1,
+    "id": "minecraft:netherite_leggings"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

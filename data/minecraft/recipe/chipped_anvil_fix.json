@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "anvil",
+  "ingredients": [
+    "minecraft:damaged_anvil",
+    "minecraft:iron_block",
+    "minecraft:magma_cream"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:anvil"
+  }
+}

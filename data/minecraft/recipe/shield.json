@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "W": "#minecraft:wooden_tool_materials",
+    "o": "minecraft:iron_ingot"
+  },
+  "pattern": [
+    "WoW",
+    "WWW",
+    " W "
+  ],
+  "result": {
+    "components": {
+      "minecraft:lore": [
+        "普通盾牌,参考旧版本剑格挡平衡的数值",
+        "1]格挡生效无延迟,范围110°",
+        "2]格挡>12的强力攻击也会受到击退",
+        "3]伤害减免到max(0,0.35x-4.2)",
+        "4]最大耐久提升"
+      ],
+      "minecraft:max_damage": 480,
+      "minecraft:blocks_attacks":{
+        "block_delay_seconds": 0,
+        "bypassed_by":"#bypasses_shield",
+        "damage_reductions":[
+          {
+            "base": 4.2,
+            "factor": 0.65,
+            "horizontal_blocking_angle": 55
+          }
+        ],
+        "item_damage": {
+          "base": 1.0,
+          "factor": 1.0,
+          "threshold": 0.0
+        }
+      }
+    },
+    "count": 1,
+    "id": "minecraft:shield"
+  }
+}
