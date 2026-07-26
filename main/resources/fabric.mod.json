@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "important-bug-fix",
+	"version": "26.1-26.2",
+	"name": "Important Bug Fix",
+	"description": "BRIEF: Fix Bugs and Add Some Datapack Things",
+	"authors": [
+		{
+			"name": "Primitive EnderDragon"
+		}
+	],
+	"contributors": [
+		"Fix Attribute Swapping: MC-28289, MC-272517 and ItemStack Problem",
+		"Fix Dragon y velocity: MC-197201, MC271336, MC-272431",
+		"Fix Attribute Limit: Armor 30->100, Toughness 20->1024",
+		"Fix Shield Knockback: MC-147694, MC-182638",
+		"Dragon and Fireball Similar to Bedrock Edition",
+		"Void No Hurt Creative and Spectate Player",
+		"Show Player Own Nametag for Datapack Display"
+	],
+	"contact": {
+		"homepage": "https://github.com/EnderdragonGateway/important-bug-fix",
+		"issues": "https://github.com/EnderdragonGateway/important-bug-fix/issues"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/importantbugfix/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"primitiveenderdragon.briefrelease.importantbugfix.ImportantBugfix"
+		],
+		"client": [
+
+		]
+	},
+	"mixins": [
+		"important-bug-fix.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.6",
+		"minecraft": ">=26.1.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
