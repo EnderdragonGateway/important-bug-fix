@@ -19,9 +19,9 @@ public class ASFServerGamePacketListenerImpl {
 	public ServerPlayer player;
 	Player playerEntity = player;
 
-	@Inject(method = "handleSetCarriedItem", at = @At("TAIL"))
-	private void onHandleSetCarriedItemTail(ServerboundSetCarriedItemPacket packet, CallbackInfo ci) {
-		player.resetAttackStrengthTicker();
+	@Inject(method = "handleAttack", at = @At("HEAD"))
+	private void onHandleAttack(ServerboundAttackPacket packet, CallbackInfo ci) {
+		((ASFLivingEntityAccessor) player).invokeCollectEquipmentChanges();
 	}
 
 	@Inject(method = "handlePlayerAction", at = @At("HEAD"))
@@ -29,13 +29,16 @@ public class ASFServerGamePacketListenerImpl {
 		((ASFLivingEntityAccessor) player).invokeCollectEquipmentChanges();
 	}
 
+/*
 	@Inject(method = "handlePlayerAction", at = @At("TAIL"))
 	private void onHandlePlayerActionTail(ServerboundPlayerActionPacket packet, CallbackInfo ci) {
 		player.resetAttackStrengthTicker();
 	}
 
-	@Inject(method = "handleAttack", at = @At("HEAD"))
-	private void onHandleAttack(ServerboundAttackPacket packet, CallbackInfo ci) {
-		((ASFLivingEntityAccessor) player).invokeCollectEquipmentChanges();
+	@Inject(method = "handleSetCarriedItem", at = @At("TAIL"))
+	private void onHandleSetCarriedItemTail(ServerboundSetCarriedItemPacket packet, CallbackInfo ci) {
+		player.resetAttackStrengthTicker();
 	}
+*/
+
 }

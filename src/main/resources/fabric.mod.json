@@ -10,13 +10,21 @@
 		}
 	],
 	"contributors": [
-		"Fix Attribute Swapping: MC-28289, MC-272517 and ItemStack Problem",
-		"Fix Dragon y velocity: MC-197201, MC271336, MC-272431",
-		"Fix Attribute Limit: Armor 30->100, Toughness 20->1024",
-		"Fix Shield Knockback: MC-147694, MC-182638",
-		"Dragon and Fireball Similar to Bedrock Edition",
-		"Void No Hurt Creative and Spectate Player",
-		"Show Player Own Nametag for Datapack Display"
+		"Bug Fixes (Priority: Survival > PVE > Speedrun > PVP)",
+		"1 Attribute Swapping: MC-28289, MC-272517",
+		"Note: Preserve AttackStrengthTime, Still Sync Attribute Modifiers",
+		"2 Dragon y velocity: MC-197201, MC271336, MC-271337, MC-272431",
+		"3 Sitting Dragon No Damage Knockback Accumulation: MC-105770, MC-196953",
+		"Note: Sitting Dragon Can Damage Entity, Same to Bedrock Edition",
+		"4 Shield Knockback: MC-147694, MC-182638",
+		"Note: Work When Attacker Can't Disable Shield and Not Enderdragon",
+		"5 Different Item Stack Judgement: MC-217607",
+		"Adding Features (Some are From Bedrock Edition)",
+		"1 Void No Hurt Creative and Spectate Player",
+		"2 Attribute Limit: Armor 30->100, Toughness 20->1024",
+		"3 Dragon Fireball Sync to BE: Radius Change=6->0, Time=120s",
+		"4 Datapack Things for Many Aspects: Shield, Enchanted Apple, Totem",
+		"5 Show Player Own Nametag for Datapack Display"
 	],
 	"contact": {
 		"homepage": "https://github.com/EnderdragonGateway/important-bug-fix",

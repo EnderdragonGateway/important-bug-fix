@@ -1,6 +1,7 @@
 package primitiveenderdragon.briefrelease.importantbugfix.mixin;
 
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.player.Player;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -17,7 +18,11 @@ public class SKBVDFLivingEntity {
     private void fixshieldknockback(LivingEntity defender, CallbackInfo ci) {
         Object selfObject = this;
         LivingEntity attacker = (LivingEntity) selfObject;
-        attacker.knockback((double)0.3F, defender.getX() - attacker.getX(), defender.getZ() - attacker.getZ());
+        if (!(attacker instanceof EnderDragon) && attacker.getSecondsToDisableBlocking() == 0.0F) {
+            attacker.knockback((double) 0.25F, defender.getX() - attacker.getX(), defender.getZ() - attacker.getZ());
+        } else {
+            defender.hurtMarked = true;
+        }
         ci.cancel();
     }
 

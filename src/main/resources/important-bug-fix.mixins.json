@@ -7,8 +7,8 @@
     "ASFItemStack",
     "ASFLivingEntityAccessor",
     "ASFServerGamePacketListenerImpl",
-    "EDFEnderDragon",
     "EDFDragonFireball",
+    "EDFEnderDragon",
     "SKBVDFLivingEntity"
   ],
   "injectors": {
