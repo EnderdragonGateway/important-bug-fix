@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:iron_ingot",
+    "B": "minecraft:copper_ingot",
+    "A": "minecraft:gold_ingot",
+    "C": "minecraft:blackstone",
+    "S": "minecraft:snout_armor_trim_smithing_template"
+  },
+  "pattern": [
+    "#S#",
+    "BCB",
+    "#A#"
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:snout_armor_trim_smithing_template"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:netherite_ingot",
+    "A": "minecraft:diamond_axe",
+    "S": "minecraft:blaze_powder",
+    "D": "minecraft:magma_cream"
+  },
+  "pattern": [
+    " #S",
+    "#D#",
+    "A# "
+  ],
+  "result": {
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:sharpness": 10, "minecraft:efficiency": 8, "minecraft:unbreaking": 4
+      },
+      "minecraft:weapon": {
+        "disable_blocking_for_seconds": 10
+      }
+    },
+    "count": 1,
+    "id": "minecraft:netherite_axe"
+  }
+}

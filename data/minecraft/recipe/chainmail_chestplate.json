@@ -10,6 +10,9 @@
     "AAA"
   ],
   "result": {
+    "components": {
+      "minecraft:max_damage": 208
+    },
     "count": 1,
     "id": "minecraft:chainmail_chestplate"
   }

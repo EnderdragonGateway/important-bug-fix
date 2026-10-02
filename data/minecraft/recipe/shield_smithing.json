@@ -18,7 +18,9 @@
       "minecraft:max_damage": 770,
       "minecraft:blocks_attacks":{
         "block_delay_seconds": 0,
+        "block_sound": "minecraft:item.shield.block",
         "bypassed_by":"#bypasses_shield",
+        "disabled_sound": "minecraft:item.shield.break",
         "damage_reductions":[
           {
             "base": 1.5,

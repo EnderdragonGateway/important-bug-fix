@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "X": "minecraft:gold_ingot"
+    "X": "minecraft:leather"
   },
   "pattern": [
     "X X",
@@ -12,10 +12,10 @@
   "result": {
     "components": {
       "minecraft:attribute_modifiers": [
-        {"type":"armor", "id":"minecraft:gha2","slot":"body", "amount":7, "operation":"add_value"}
+        {"type":"armor", "id":"minecraft:lha2","slot":"body", "amount":4, "operation":"add_value"}
       ]
     },
     "count": 1,
-    "id": "minecraft:golden_horse_armor"
+    "id": "minecraft:leather_horse_armor"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:stick",
+    "X": "#minecraft:iron_tool_materials"
+  },
+  "pattern": [
+    "XX",
+    "X#",
+    " #"
+  ],
+  "result": {
+    "components": {
+      "minecraft:weapon":{
+        "disable_blocking_for_seconds": 4.05
+      }
+    },
+    "count": 1,
+    "id": "minecraft:iron_axe"
+  }
+}

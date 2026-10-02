@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:nether_star",
+  "base": "minecraft:book",
+  "result": {
+    "components": {
+      "minecraft:stored_enchantments": {
+        "minecraft:mending": 1
+      }
+    },
+    "count": 1,
+    "id": "minecraft:enchanted_book"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

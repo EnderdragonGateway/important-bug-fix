@@ -10,6 +10,11 @@
     "X X"
   ],
   "result": {
+    "components": {
+      "minecraft:attribute_modifiers": [
+        {"type":"armor", "id":"minecraft:iha2","slot":"body", "amount":9, "operation":"add_value"}
+      ]
+    },
     "count": 1,
     "id": "minecraft:iron_horse_armor"
   }

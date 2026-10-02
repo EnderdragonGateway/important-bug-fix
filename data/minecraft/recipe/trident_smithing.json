@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "minecraft:trident",
+  "result": {
+    "components": {
+      "minecraft:attribute_modifiers": [
+        {"type":"attack_speed", "id":"minecraft:tas1","slot":"mainhand", "amount":-2.75, "operation":"add_value"},
+        {"type":"entity_interaction_range", "id":"minecraft:tpei1","slot":"mainhand", "amount":1.0, "operation":"add_value"},
+        {"type":"attack_damage", "id":"minecraft:tad1","slot":"mainhand", "amount":9, "operation":"add_value"}
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:trident"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

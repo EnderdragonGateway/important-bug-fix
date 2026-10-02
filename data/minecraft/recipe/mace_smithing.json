@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "minecraft:mace",
+  "result": {
+    "components": {
+      "minecraft:attribute_modifiers": [
+        {"type":"attack_speed", "id":"minecraft:mas1","slot":"mainhand", "amount":-3.3, "operation":"add_value"},
+        {"type":"entity_interaction_range", "id":"minecraft:mpei1","slot":"mainhand", "amount":0.5, "operation":"add_value"},
+        {"type":"attack_damage", "id":"minecraft:mad1","slot":"mainhand", "amount":6, "operation":"add_value"}
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:mace"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

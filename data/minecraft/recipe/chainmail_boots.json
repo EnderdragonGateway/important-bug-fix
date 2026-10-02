@@ -9,6 +9,9 @@
     "A A"
   ],
   "result": {
+    "components": {
+      "minecraft:max_damage": 169
+    },
     "count": 1,
     "id": "minecraft:chainmail_boots"
   }

@@ -10,6 +10,12 @@
     "X X"
   ],
   "result": {
+    "components": {
+      "minecraft:attribute_modifiers": [
+        {"type":"armor", "id":"minecraft:dha2","slot":"body", "amount":11, "operation":"add_value"},
+        {"type":"armor_toughness", "id":"minecraft:dhat2","slot":"body", "amount":4, "operation":"add_value"}
+      ]
+    },
     "count": 1,
     "id": "minecraft:diamond_horse_armor"
   }

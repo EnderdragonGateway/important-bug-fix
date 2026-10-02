@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:stick",
+    "X": "#minecraft:wooden_tool_materials"
+  },
+  "pattern": [
+    "XX",
+    "X#",
+    " #"
+  ],
+  "result": {
+    "components": {
+      "minecraft:weapon":{
+        "disable_blocking_for_seconds": 2.8
+      }
+    },
+    "count": 1,
+    "id": "minecraft:wooden_axe"
+  }
+}

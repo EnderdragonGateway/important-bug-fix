@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:diamond",
+  "base": "minecraft:turtle_helmet",
+  "result": {
+    "components": {
+      "minecraft:attribute_modifiers": [
+        {"type":"armor", "id":"minecraft:ta1","slot":"head", "amount":3, "operation":"add_value"},
+        {"type":"armor_toughness", "id":"minecraft:tat1","slot":"head", "amount":1, "operation":"add_value"}
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:turtle_helmet"
+  },
+  "template": "minecraft:netherite_scrap"
+}
