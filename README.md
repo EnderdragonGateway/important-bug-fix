@@ -35,10 +35,22 @@ Minecraft: important bug fix
 2-4. 关于龙难度、盾牌、附魔金苹果、图腾、锁链甲等数据包内容
   "Datapack Things for Many Aspects: Dragon Difficulty, Shield, Enchanted Apple, Totem, Chain Armor"
 
-2-5. 展示玩家自己的名字标签，方便数据包显示内容
-  "Show Player Own Nametag for Datapack Display"
+2-5. 长按右键连续交互速度，5/s-> 创造20/s，其它10/s
+  "Holding Right Click Interact Speed 5/s-> Creative: 20/s, Other: 10/s"
 
-2-6. 能够正确以数字显示附魔和药水1-255等级
+2-6. 降低挖掘延迟，250ms-> 创造50ms，其它100ms
+  "Decrease Mining Cooldown 250ms-> Creative: 50ms, Other: 100ms"
+
+2-7. 调整不死图腾默认效果，防止原版瞬间伤害2药箭触发穿透图腾的击杀：MC-206307
+  "Adjust Totem Default Effect, Improving Instant 2 Arrow Make Bypass Kill: MC-206307"
+
+2-8. 略微加快重锤攻速，以更好配合风弹弹跳形成暴击
+  "Slightly Add Mace Attack Speed for Better Crit with Wind charge Jumping"
+
+2-9. 展示玩家自己的名字标签，方便数据包显示内容
+  "Show Player Own Nametag for Datapack Display"
+  
+2-10. 能够正确以数字显示附魔和药水1-255等级
   "Display 1-255 Level for Enchantments and Effects Correctly"
 
 参考项目 Refrence:
