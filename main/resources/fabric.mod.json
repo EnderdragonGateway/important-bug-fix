@@ -1,0 +1,58 @@
+{
+	"schemaVersion": 1,
+	"id": "important-bug-fix",
+	"version": "26.1-26.2",
+	"name": "Important Bug Fix",
+	"description": "BRIEF: Fix Bugs and Add Some Datapack Things",
+	"authors": [
+		{
+			"name": "Primitive EnderDragon"
+		}
+	],
+	"contributors": [
+		"Bug Fixes (Priority: Survival > PVE > Speedrun > PVP)",
+		"1 Attribute Swapping: MC-28289, MC-272517",
+		"Note: Preserve AttackStrengthTime, Still Sync Attribute Modifiers",
+		"2 Dragon y velocity: MC-197201, MC271336, MC-271337, MC-272431",
+		"3 Sitting Dragon No Damage Knockback Accumulation: MC-105770, MC-196953",
+		"Note: Sitting Dragon Can Damage Entity, Same to Bedrock Edition",
+		"4 Shield Knockback: MC-147694, MC-182638",
+		"Note: Work When Attacker Can't Disable Shield and Not Enderdragon",
+		"5 Different Item Stack Judgement: MC-217607",
+		"6 Adjust Totems Effect to Restrain Some Bypassed Killing: MC-206307",
+		"Note: Can Solve Instant Damage 2 in Vanilla, Can't for Higher Damage",
+		"Adding Features (Some are From Bedrock Edition)",
+		"1 Void No Hurt Creative and Spectate Player",
+		"2 Attribute Limit: Armor 30->100, Toughness 20->1024",
+		"3 Dragon Fireball Sync to BE: Radius Change=6->0, Time=120s",
+		"4 Datapack Things for Many Aspects: Shield, Enchanted Apple, Totem",
+		"5 Increase Right Click Delay 5/s -> Creative: 20/s, Other: 10/s",
+		"Note: Bedrock Edition Has 20/s But Not Simply Because of Speed",
+		"6 Show Player Own Nametag for Datapack Display",
+		"7 Increase Mace Attack Speed for Crit by Windcharge Jumping"
+	],
+	"contact": {
+		"homepage": "https://github.com/EnderdragonGateway/important-bug-fix",
+		"issues": "https://github.com/EnderdragonGateway/important-bug-fix/issues"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/importantbugfix/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"primitiveenderdragon.briefrelease.importantbugfix.ImportantBugfix"
+		],
+		"client": [
+
+		]
+	},
+	"mixins": [
+		"important-bug-fix.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.6",
+		"minecraft": ">=26.1.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

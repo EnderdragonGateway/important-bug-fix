@@ -1,0 +1,28 @@
+{
+  "required": true,
+  "package": "primitiveenderdragon.briefrelease.importantbugfix.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "AFRAttributes",
+    "ASFItemStack",
+    "ASFLivingEntityAccessor",
+    "ASFServerGamePacketListenerImpl",
+    "COPDeathProtection",
+    "COPMaceItem",
+    "EDFDragonFireball",
+    "EDFEnderDragon",
+    "SKBVDFLivingEntity"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "client": [
+    "FRCClientMinecraft",
+    "FRCMouseHandler",
+    "NMCMiningCooldown",
+    "SMNLivingEntityRenderer"
+  ]
+}
